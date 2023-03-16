@@ -1,0 +1,30 @@
+.first-container {
+    position: fixed;
+    background-color: #E28C67;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.man-image {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    height: 60%;
+}
+
+@media (max-width: 760px) {
+    .man-image {
+        bottom: -100px;
+    }
+}
+@media (max-width: 500px) {
+    .man-image {
+        bottom: -250px;
+        left: auto;
+        margin: auto;
+    }
+}

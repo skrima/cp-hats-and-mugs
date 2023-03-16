@@ -1,11 +1,16 @@
 import React from 'react'
 import Stylesheet from 'reactjs-stylesheet'
+import { FaFacebookF, FaTwitter } from 'react-icons/fa'
 
 function Footer() {
   return (
     <div style={styles.container}>
         <div>
-            <p>Follow us on social media</p>
+            <small>Follow us on social media</small>
+            <div style={styles.socialContainer}>
+                <FaFacebookF />
+                <FaTwitter />
+            </div>
         </div>
         <small style={styles.copyright}>Copyright &copy; hatsandmugs, 2023</small>
     </div>
@@ -25,11 +30,17 @@ const styles = Stylesheet.create({
         paddingLeft: 20,
         paddingRight: 20,
     },
+    socialContainer: {
+        display: 'flex',
+        gap: 20,
+        marginTop: 20,
+        marginLeft: 10,
+    },
     copyright: {
         position: 'absolute',
         alignSelf: 'center',
         bottom: 0,
-        marginBottom: 20
+        marginBottom: 20,
     }
 })
 
