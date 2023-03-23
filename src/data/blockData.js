@@ -10,7 +10,7 @@ export default [
         image: me,
         name: 'Benedict',
         role: 'C.E.O.',
-        content: `As the CEO of a company in the tea industry, I have to say that 'Hats and Mugs' is one of the most impressive tea sales and services apps I have seen in a long time. Your innovative approach to the industry and your dedication to providing high-quality teas and exceptional customer service is truly impressive.`
+        content: `As the CEO of a company in the tea industry, I have to say that 'Hats and Mugs' is one of the most impressive tea sales and services apps I have seen in a long time. Our innovative approach to the industry and dedication to providing high-quality teas and exceptional customer service is truly impressive.`
     },
     {
         id: '2',
