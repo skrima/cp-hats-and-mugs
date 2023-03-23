@@ -11,7 +11,7 @@ function Block2({image, title, content, role}) {
           src={image ? image : defaultImage} />
       <p style={styles.content}>{content}</p>
       <div style={styles.buttonContainer}>
-        <button style={styles.button}>{`MORE >>>`}</button>
+        <button style={styles.button} onClick={() => {alert('Meow!')}}>{`MORE >>>`}</button>
       </div>
     </div>
   )

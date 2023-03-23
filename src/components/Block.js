@@ -2,13 +2,13 @@ import React from 'react'
 import Stylesheet from 'reactjs-stylesheet'
 import defaultImage from '../assets/tea_image2.jpg'
 
-function Block({image, name, content, role}) {
+function Block({image, name, content, role, style}) {
   return (
     <div style={styles.container}>
       <div style={styles.picContainer}>
         <div style={styles.picWhite} />
         <img
-          style={styles.image} 
+          style={{...styles.image, ...style}} 
           src={image ? image : defaultImage} />
       </div>
       <h5 style={styles.name}>
@@ -41,6 +41,7 @@ const styles = Stylesheet.create({
       overflow: 'hidden',
       border: '4px solid #952429',
       marginTop: 20,
+      position: 'relative'
     },
     picWhite: {
       position: 'absolute',
@@ -49,6 +50,7 @@ const styles = Stylesheet.create({
       borderRadius: 100,
       border: '4px solid white',
       backgroundColor: 'transparent',
+      zIndex: 1
     },
     image: {
       width: '100%',

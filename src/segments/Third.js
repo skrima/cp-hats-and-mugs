@@ -20,6 +20,7 @@ function Third() {
                         name={data.name}
                         role={data.role}
                         content={data.content}
+                        style={data.style}
                     />)}
                 </div>
             </div>

@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Stylesheet from 'reactjs-stylesheet'
-import { FaFacebookF, FaTwitter } from 'react-icons/fa'
+import { FaLinkedinIn, FaEnvelope, FaGithubAlt } from 'react-icons/fa'
 
 function Footer() {
+
+    const [social, setSocial] = useState('')
+    const linkRef = useRef(null)
+    
+    const setLink = (link) => {
+        setSocial(link)
+    }
+
+    useEffect(() => {
+        if (social) linkRef.current.click()
+    }, [social])
+
   return (
     <div style={styles.container}>
         <div>
+            <a ref={linkRef} href={social} target='_blank' 
+                style={{position: 'absolute', width: 0, height: 0, opacity: 0}} /> 
             <small>Follow us on social media</small>
             <div style={styles.socialContainer}>
-                <FaFacebookF style={styles.icon} />
-                <FaTwitter style={styles.icon} />
+                <FaLinkedinIn onClick={() => setLink('https://linkedin.com/in/benedict-gabriel-841836253/')} style={styles.icon} />
+                <FaEnvelope onClick={() => setLink('mailto:benedictgabriel73@gmail.com?subject=Feedback')} style={styles.icon} />
+                <FaGithubAlt onClick={() => setLink('https://github.com/benhexie')} style={styles.icon} />
             </div>
         </div>
         <small style={styles.copyright}>Copyright &copy; hatsandmugs, 2023</small>

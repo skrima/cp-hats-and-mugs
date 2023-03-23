@@ -12,7 +12,7 @@ function First() {
         <div style={styles.centerContainer}>
             <h1 style={styles.title}>HATS AND MUGS</h1>
             <p style={styles.desc}>Gentlemen drink Tea</p>
-            <button style={styles.button}>PLACE AN ORDER</button>
+            <button style={styles.button} onClick={() => {alert('Dey play.')}}>PLACE AN ORDER</button>
         </div>
         <img className='man-image' src={man} />
     </div>
