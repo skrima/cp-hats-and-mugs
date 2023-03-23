@@ -8,8 +8,8 @@ function Footer() {
         <div>
             <small>Follow us on social media</small>
             <div style={styles.socialContainer}>
-                <FaFacebookF />
-                <FaTwitter />
+                <FaFacebookF style={styles.icon} />
+                <FaTwitter style={styles.icon} />
             </div>
         </div>
         <small style={styles.copyright}>Copyright &copy; hatsandmugs, 2023</small>
@@ -35,6 +35,9 @@ const styles = Stylesheet.create({
         gap: 20,
         marginTop: 20,
         marginLeft: 10,
+    },
+    icon: {
+        cursor: 'pointer',
     },
     copyright: {
         position: 'absolute',
