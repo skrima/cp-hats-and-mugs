@@ -1,1 +1,1 @@
-CI= "yarn build"
+CI= false yarn build
